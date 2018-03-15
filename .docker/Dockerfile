@@ -5,8 +5,10 @@ MAINTAINER Colin Fleming <c3flemin@gmail.com>
 # note: move this to three ARG commands when CircleCI updates their docker
 ENV DCAF_DIR=/usr/src/app \
     BUILD_DEPENDENCIES="build-base libxml2-dev libxslt-dev linux-headers bash openssh fontconfig fontconfig-dev curl" \
-    APP_DEPENDENCIES="nodejs git" \
-    FONTCONFIG_PATH=/etc/fonts
+    APP_DEPENDENCIES="nodejs git chromium chromium-chromedriver xvfb udev" \
+    FONTCONFIG_PATH=/etc/fonts \
+    CHROME_BIN=/usr/bin/chromium-browser \
+    CHROME_PATH=/usr/lib/chromium/
 
 # get our gem house in order
 RUN mkdir -p ${DCAF_DIR} && cd ${DCAF_DIR}

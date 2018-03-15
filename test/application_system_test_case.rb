@@ -8,5 +8,6 @@ class ApplicationSystemTestCase < ActionDispatch::SystemTestCase
 
   before { Capybara.reset_sessions! }
 
-  driven_by :selenium, using: :chrome, screen_size: [1400, 1400]
+  options = %w[--headless --no-sandbox]
+  driven_by :selenium, using: :chrome, screen_size: [1400, 1400], options: { args: options }
 end
