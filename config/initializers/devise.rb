@@ -246,6 +246,12 @@ Devise.setup do |config|
   #   manager.default_strategies(scope: :user).unshift :some_external_strategy
   # end
 
+  require "devise/models/password_blacklistable"
+
+  require "devise/password_blacklistable"
+
+  Devise.add_module :password_blacklistable
+
   # ==> Mountable engine configurations
   # When using Devise inside an engine, let's call it `MyEngine`, and this engine
   # is mountable, there are some extra configurations to be taken into account.

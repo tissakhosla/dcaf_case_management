@@ -25,6 +25,7 @@ class User
           :validatable,
           :lockable,
           :timeoutable,
+          :password_blacklistable,
           :omniauthable, omniauth_providers: [:google_oauth2]
   # :rememberable
   # :confirmable
